@@ -1,0 +1,20 @@
+<div *ngIf="results != {}; else noResults">
+<ion-list *ngFor="let result of results">
+  <ion-item>
+    <h2>{{ result.username }}</h2>
+    <p>{{ result.profile_desc }}</p>
+    <button ion-button clear item-end>View</button>
+  </ion-item>
+</ion-list>
+</div>
+
+<ng-template #noResults>
+  <ion-card>
+  <ion-card-header>
+    Start typing a #hastag or @username to get a list of awesomeness from Twitter
+  </ion-card-header>
+</ion-card>
+</ng-template>
+
+
+

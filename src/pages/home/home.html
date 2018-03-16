@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class='home-title' text-center>Twitterum</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+
+  <!-- Get user input -->
+  <ion-item>
+    <!-- Key up event handler on search box to initiate search and pulling of results as the user in typing in -->
+    <ion-input placeholder="#search-hastag or @search-twitter-page" (keyup)="onKeyRelease($event)" clearInput></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<!-- Display the results dynamically -->
+<results-list [searchResults]="{}"></results-list>
+
+
+</ion-content>
+
